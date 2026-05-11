@@ -19,7 +19,7 @@
             <div class="text-2xl font-bold bg-gradient-to-r from-indigo-400 to-cyan-400 bg-clip-text text-transparent">
                 SAFIULL.dev
             </div>
-            <div class="hidden md:flex space-x-8 text-sm font-medium">
+            <div class="hidden md:flex space-x-8 text-sm font-medium items-center">
                 <a href="#hero" class="nav-link hover:text-indigo-400 transition-colors">Home</a>
                 <a href="#about" class="nav-link hover:text-indigo-400 transition-colors">About</a>
                 <a href="#skills" class="nav-link hover:text-indigo-400 transition-colors">Skills</a>
@@ -30,35 +30,66 @@
     </nav>
 
     <!-- Hero Section -->
-    <section id="hero" class="min-h-screen flex items-center pt-20 px-6 overflow-hidden relative">
-        <div class="absolute top-20 -left-20 w-72 h-72 bg-indigo-600/20 rounded-full blur-[120px]"></div>
-        <div class="absolute bottom-10 -right-20 w-96 h-96 bg-cyan-600/10 rounded-full blur-[120px]"></div>
+    <section id="hero" class="py-24 md:py-40 px-6 overflow-hidden relative bg-grid">
+        <!-- Animated Background Blobs -->
+        <div class="absolute top-20 -left-20 w-96 h-96 bg-indigo-600/20 rounded-full blur-[120px] animate-pulse"></div>
+        <div class="absolute bottom-10 -right-20 w-[500px] h-[500px] bg-cyan-600/10 rounded-full blur-[120px] animate-pulse" style="animation-delay: 2s;"></div>
         
-        <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center relative z-10">
-            <div class="reveal">
-                <h2 class="text-indigo-400 font-semibold tracking-widest uppercase mb-4">Available for New Projects</h2>
-                <h1 class="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-                    Building Scalable <span class="bg-gradient-to-r from-indigo-400 to-cyan-400 bg-clip-text text-transparent">SaaS Solutions.</span>
+        <div class="max-w-7xl mx-auto grid lg:grid-cols-12 gap-16 items-center relative z-10">
+            <!-- Text Content -->
+            <div class="lg:col-span-7 reveal">
+                <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-indigo-500/10 border border-indigo-500/20 text-indigo-400 text-xs font-bold tracking-widest uppercase mb-8">
+                    <span class="relative flex h-2 w-2">
+                        <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-indigo-400 opacity-75"></span>
+                        <span class="relative inline-flex rounded-full h-2 w-2 bg-indigo-500"></span>
+                    </span>
+                    Available for New Projects
+                </div>
+                
+                <h1 class="text-6xl md:text-8xl font-black text-white mb-8 leading-[1.1] tracking-tight">
+                    Building <span class="bg-gradient-to-r from-indigo-400 via-cyan-400 to-emerald-400 bg-clip-text text-transparent">Scalable</span> SaaS Solutions.
                 </h1>
-                <p class="text-lg text-slate-400 mb-8 max-w-lg leading-relaxed">
-                    I am <span class="text-white font-medium">MD. Safiull Alam</span>, a Senior Full Stack Developer specializing in Laravel and enterprise-grade system architecture.
+                
+                <p class="text-xl text-slate-400 mb-10 max-w-2xl leading-relaxed">
+                    I am <span class="text-white font-semibold">MD. Safiull Alam</span>, a Senior Full Stack Developer. I architect high-performance enterprise systems that bridge the gap between technical excellence and business growth.
                 </p>
-                <div class="flex flex-wrap gap-4">
-                    <a href="#projects" class="px-8 py-4 bg-indigo-600 hover:bg-indigo-700 text-white rounded-xl font-semibold transition-all hover:shadow-[0_0_20px_rgba(79,70,229,0.4)]">View Projects</a>
-                    <a href="#contact" class="px-8 py-4 border border-slate-700 hover:border-indigo-500 rounded-xl font-semibold transition-all bg-slate-900/50">Contact Me</a>
+                
+                <div class="flex flex-wrap gap-6">
+                    <a href="#projects" class="group relative px-8 py-4 bg-indigo-600 hover:bg-indigo-700 text-white rounded-2xl font-bold transition-all overflow-hidden shadow-[0_0_30px_rgba(79,70,229,0.3)] hover:shadow-[0_0_50px_rgba(79,70,229,0.5)]">
+                        <span class="relative z-10">View My Work</span>
+                        <div class="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></div>
+                    </a>
+                    <a href="#contact" class="px-8 py-4 border border-slate-800 hover:border-indigo-500/50 rounded-2xl font-bold transition-all bg-slate-900/40 backdrop-blur-sm hover:bg-slate-800/60">
+                        Let's Talk
+                    </a>
                 </div>
             </div>
-            <div class="relative reveal delay-200">
-                <div class="relative z-10 rounded-3xl overflow-hidden border border-slate-800 shadow-2xl group">
-                    <!-- Placeholder image - Replace with actual photo -->
-                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=800" alt="Safiull Alam" class="w-full h-[500px] object-cover grayscale hover:grayscale-0 transition-all duration-700">
-                    <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent"></div>
+
+            <!-- Tech Stack Visual -->
+            <div class="lg:col-span-5 relative reveal delay-200">
+                <div class="animate-float">
+                    <div class="relative z-10 rounded-[3rem] p-1 glass-morphism tech-stack-glow group">
+                        <div class="bg-slate-950/40 rounded-[2.8rem] p-10 flex items-center justify-center overflow-hidden">
+                            <!-- Technology Icons Image -->
+                            <img src="https://skillicons.dev/icons?i=php,laravel,nodejs,express,vue,nuxtjs,react,nextjs,js,html,css,bootstrap,tailwind,mysql,postgres,mongodb,firebase,git,docker,aws&perline=5" 
+                                 alt="Technical Skills" 
+                                 class="w-full h-auto max-w-[380px] filter drop-shadow-[0_0_15px_rgba(79,70,229,0.3)] transform group-hover:scale-110 transition-all duration-1000 ease-out">
+                        </div>
+                    </div>
                 </div>
-                <!-- Experience Badge -->
-                <div class="absolute -bottom-6 -left-6 glass p-6 rounded-2xl border border-white/10 z-20">
-                    <p class="text-3xl font-bold text-white">5+</p>
-                    <p class="text-xs text-indigo-300 uppercase tracking-wider leading-tight">Years of<br>Experience</p>
+
+                <!-- Floating Stats Badge -->
+                <div class="absolute -bottom-10 -left-10 glass-morphism p-8 rounded-3xl border border-white/10 z-20 badge-glow animate-float" style="animation-delay: -3s;">
+                    <div class="flex items-center gap-4">
+                        <div class="text-5xl font-black text-white tracking-tighter">5<span class="text-indigo-500 text-3xl">+</span></div>
+                        <div class="h-10 w-px bg-slate-800"></div>
+                        <p class="text-[10px] text-indigo-300 uppercase font-black tracking-[0.2em] leading-tight">Years of<br>Expertise</p>
+                    </div>
                 </div>
+
+                <!-- Decorative Elements -->
+                <div class="absolute -top-10 -right-10 w-24 h-24 border-2 border-dashed border-indigo-500/20 rounded-full animate-spin-slow"></div>
+                <div class="absolute top-1/2 -right-4 w-4 h-4 bg-cyan-400 rounded-full blur-sm animate-pulse"></div>
             </div>
         </div>
     </section>
@@ -111,6 +142,7 @@
                     <span class="skill-pill">Node.js</span>
                     <span class="skill-pill">MySQL</span>
                     <span class="skill-pill">PostgreSQL</span>
+                    <span class="skill-pill">MongoDB</span>
                 </div>
             </div>
             <!-- Frontend -->
@@ -119,8 +151,8 @@
                 <h3 class="text-xl font-bold mb-4">Frontend Frameworks</h3>
                 <div class="flex flex-wrap gap-2">
                     <span class="skill-pill">Vue.js</span>
+                    <span class="skill-pill">Nuxt.js</span>
                     <span class="skill-pill">React.js</span>
-                    <span class="skill-pill">Next.js</span>
                     <span class="skill-pill">Tailwind CSS</span>
                     <span class="skill-pill">JavaScript (ES6+)</span>
                 </div>
@@ -202,70 +234,272 @@
     </section>
 
     <!-- Projects Section -->
-    <section id="projects" class="py-24 px-6 max-w-7xl mx-auto">
-        <h2 class="text-4xl font-bold text-white mb-4 reveal">Featured Projects</h2>
-        <p class="text-slate-400 mb-12 reveal">High-impact enterprise applications built for scale.</p>
+    <section id="projects" class="py-32 px-6 max-w-7xl mx-auto relative">
+        <div class="absolute top-0 right-0 w-64 h-64 bg-indigo-600/5 rounded-full blur-[100px] -z-10"></div>
         
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-20">
-            <!-- Project 1 -->
-            <div class="project-card reveal">
-                <div class="h-64 bg-slate-800 overflow-hidden relative group">
-                    <img src="https://images.unsplash.com/photo-1556742044-3c52d6e88c62?auto=format&fit=crop&q=80&w=800" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" alt="POS System">
-                </div>
-                <div class="p-8">
-                    <h3 class="text-2xl font-bold text-white mb-3">POS SaaS System</h3>
-                    <p class="text-slate-400 mb-6">A multi-tenant Point of Sale system with inventory tracking, financial reporting, and subscription management.</p>
-                    <div class="flex gap-3">
-                        <span class="text-xs bg-slate-800 px-3 py-1 rounded-full text-indigo-300 border border-slate-700">Laravel</span>
-                        <span class="text-xs bg-slate-800 px-3 py-1 rounded-full text-indigo-300 border border-slate-700">Vue.js</span>
-                    </div>
-                </div>
-            </div>
-            <!-- Project 2 -->
-            <div class="project-card reveal delay-200">
-                <div class="h-64 bg-slate-800 overflow-hidden relative group">
-                    <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=800" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" alt="ERP System">
-                </div>
-                <div class="p-8">
-                    <h3 class="text-2xl font-bold text-white mb-3">Enterprise ERP & HRM</h3>
-                    <p class="text-slate-400 mb-6">Comprehensive resource planning tool for employee management, payroll, and asset tracking.</p>
-                    <div class="flex gap-3">
-                        <span class="text-xs bg-slate-800 px-3 py-1 rounded-full text-indigo-300 border border-slate-700">PHP</span>
-                        <span class="text-xs bg-slate-800 px-3 py-1 rounded-full text-indigo-300 border border-slate-700">MySQL</span>
-                    </div>
-                </div>
-            </div>
+        <div class="mb-20 reveal">
+            <h2 class="text-5xl font-black text-white mb-6 section-title-glow">Featured <span class="text-indigo-400">Masterpieces</span></h2>
+            <p class="text-slate-400 text-lg max-w-2xl">High-impact enterprise applications architected for global scale and performance.</p>
         </div>
+        
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 mb-32">
+            <!-- Project 1: Glamdemy -->
+            <div class="project-card-premium rounded-[2.5rem] reveal group">
+                <div class="p-10 flex flex-col h-full justify-between">
+                    <div>
+                        <div class="flex justify-between items-start mb-8">
+                            <div class="w-16 h-16 rounded-2xl bg-indigo-500/10 flex items-center justify-center border border-indigo-500/20 group-hover:scale-110 transition-transform duration-500">
+                                <i data-lucide="sparkles" class="text-indigo-400 w-8 h-8"></i>
+                            </div>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="tech-badge">PHP</span>
+                                <span class="tech-badge">Laravel</span>
+                                <span class="tech-badge">jQuery</span>
+                            </div>
+                        </div>
+                        <h3 class="text-3xl font-black text-white mb-4 group-hover:text-indigo-400 transition-colors">Glamdemy</h3>
+                        <p class="text-slate-400 text-lg leading-relaxed mb-10">
+                            A high-end beauty education and e-commerce platform offering specialized video courses, digital resources, and professional products for skill-based career growth.
+                        </p>
+                    </div>
+                    <div class="flex items-center justify-between">
+                        <a href="https://glamdemy.acnoo.xyz/" target="_blank" class="inline-flex items-center gap-3 px-8 py-4 bg-indigo-600 text-white rounded-2xl font-black transition-all shadow-lg shadow-indigo-600/20 hover:shadow-indigo-600/40 hover:-translate-y-1">
+                            Live Preview 
+                            <i data-lucide="external-link" class="w-5 h-5"></i>
+                        </a>
+                        <div class="text-slate-800 font-black text-6xl select-none group-hover:text-indigo-500/10 transition-colors">01</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 2: HRM Pro -->
+            <div class="project-card-premium rounded-[2.5rem] reveal delay-100 group">
+                <div class="p-10 flex flex-col h-full justify-between">
+                    <div>
+                        <div class="flex justify-between items-start mb-8">
+                            <div class="w-16 h-16 rounded-2xl bg-rose-500/10 flex items-center justify-center border border-rose-500/20 group-hover:scale-110 transition-transform duration-500">
+                                <i data-lucide="users" class="text-rose-400 w-8 h-8"></i>
+                            </div>
+                            <div class="flex gap-2">
+                                <span class="tech-badge">Laravel</span>
+                                <span class="tech-badge">SaaS</span>
+                                <span class="tech-badge">Payroll</span>
+                            </div>
+                        </div>
+                        <h3 class="text-3xl font-black text-white mb-4 group-hover:text-rose-400 transition-colors">HRM Pro</h3>
+                        <p class="text-slate-400 text-lg leading-relaxed mb-10">
+                            A comprehensive SaaS human resource management system designed to automate employee lifecycles, real-time attendance, and complex payroll workflows.
+                        </p>
+                    </div>
+                    <div class="flex items-center justify-between">
+                        <a href="https://hrmpro.acnoo.xyz/" target="_blank" class="inline-flex items-center gap-3 px-8 py-4 bg-slate-800 hover:bg-slate-700 text-white rounded-2xl font-black transition-all hover:-translate-y-1">
+                            Live Preview 
+                            <i data-lucide="external-link" class="w-5 h-5"></i>
+                        </a>
+                        <div class="text-slate-800 font-black text-6xl select-none group-hover:text-rose-500/10 transition-colors">02</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 3: POS Pro -->
+            <div class="project-card-premium rounded-[2.5rem] reveal delay-200 group">
+                <div class="p-10 flex flex-col h-full justify-between">
+                    <div>
+                        <div class="flex justify-between items-start mb-8">
+                            <div class="w-16 h-16 rounded-2xl bg-cyan-500/10 flex items-center justify-center border border-cyan-500/20 group-hover:scale-110 transition-transform duration-500">
+                                <i data-lucide="shopping-cart" class="text-cyan-400 w-8 h-8"></i>
+                            </div>
+                            <div class="flex gap-2">
+                                <span class="tech-badge">Flutter</span>
+                                <span class="tech-badge">Firebase</span>
+                                <span class="tech-badge">SaaS</span>
+                            </div>
+                        </div>
+                        <h3 class="text-3xl font-black text-white mb-4 group-hover:text-cyan-400 transition-colors">POS Pro</h3>
+                        <p class="text-slate-400 text-lg leading-relaxed mb-10">
+                            A high-performance SaaS point-of-sale solution with offline synchronization, multi-language support, and advanced inventory tracking for modern retail.
+                        </p>
+                    </div>
+                    <div class="flex items-center justify-between">
+                        <a href="https://pospro.app/" target="_blank" class="inline-flex items-center gap-3 px-8 py-4 bg-slate-800 hover:bg-slate-700 text-white rounded-2xl font-black transition-all hover:-translate-y-1">
+                            Live Preview 
+                            <i data-lucide="external-link" class="w-5 h-5"></i>
+                        </a>
+                        <div class="text-slate-800 font-black text-6xl select-none group-hover:text-cyan-500/10 transition-colors">03</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 4: Glass ERP -->
+            <div class="project-card-premium rounded-[2.5rem] reveal delay-300 group">
+                <div class="p-10 flex flex-col h-full justify-between">
+                    <div>
+                        <div class="flex justify-between items-start mb-8">
+                            <div class="w-16 h-16 rounded-2xl bg-emerald-500/10 flex items-center justify-center border border-emerald-500/20 group-hover:scale-110 transition-transform duration-500">
+                                <i data-lucide="factory" class="text-emerald-400 w-8 h-8"></i>
+                            </div>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="tech-badge">Laravel</span>
+                                <span class="tech-badge">Industrial</span>
+                                <span class="tech-badge">ERP</span>
+                            </div>
+                        </div>
+                        <h3 class="text-3xl font-black text-white mb-4 group-hover:text-emerald-400 transition-colors">Glass ERP Solutions</h3>
+                        <p class="text-slate-400 text-lg leading-relaxed mb-8">
+                            A specialized end-to-end glass selling ERP system. Featuring precision cutting, task assignment with automated notifications, sales and purchase management, plus integrated HRM and Accounts modules.
+                        </p>
+                    </div>
+                    <div class="flex items-center justify-between">
+                        <a href="https://glasserp.acnoo.xyz/admin/dashboard" target="_blank" class="inline-flex items-center gap-3 px-8 py-4 bg-slate-800 hover:bg-slate-700 text-white rounded-2xl font-black transition-all hover:-translate-y-1">
+                            Live Preview 
+                            <i data-lucide="external-link" class="w-5 h-5"></i>
+                        </a>
+                        <div class="text-slate-800 font-black text-6xl select-none group-hover:text-emerald-500/10 transition-colors">04</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 5: School Management System (Premium Full-Width) -->
+            <div class="project-card-premium rounded-[3rem] reveal delay-400 group lg:col-span-2 overflow-hidden">
+                <div class="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-amber-500/5 to-transparent -z-10"></div>
+                <div class="p-8 md:p-12">
+                    <div class="flex flex-col lg:flex-row gap-12 items-center">
+                        <!-- Content Side -->
+                        <div class="lg:w-3/5">
+                            <div class="inline-flex items-center gap-3 px-4 py-2 rounded-full bg-amber-500/10 border border-amber-500/20 text-amber-400 text-xs font-bold tracking-widest uppercase mb-8">
+                                <i data-lucide="graduation-cap" class="w-4 h-4"></i>
+                                Education Technology
+                            </div>
+
+                            <h3 class="text-4xl md:text-5xl font-black text-white mb-6 group-hover:text-amber-400 transition-colors duration-500">
+                                EduSmart <span class="text-slate-500 text-2xl font-medium block md:inline mt-2 md:mt-0 md:ml-2">Complete Academic Ecosystem</span>
+                            </h3>
+
+                            <p class="text-slate-400 text-lg leading-relaxed mb-10 max-w-2xl">
+                                A high-performance digital infrastructure for modern schools. This system orchestrates everything from automated admissions and student record management to complex fee structures and real-time exam results.
+                            </p>
+
+                            <div class="flex flex-wrap gap-4 mb-10">
+                                <a href="https://school.acnoo.xyz/login" target="_blank" class="px-8 py-4 bg-amber-500 hover:bg-amber-600 text-slate-950 rounded-2xl font-black transition-all shadow-lg shadow-amber-500/20 hover:shadow-amber-500/40 hover:-translate-y-1 flex items-center gap-2">
+                                    Live Dashboard <i data-lucide="external-link" class="w-5 h-5"></i>
+                                </a>
+                                <div class="flex gap-2">
+                                    <span class="tech-badge">Laravel</span>
+                                    <span class="tech-badge">SaaS</span>
+                                    <span class="tech-badge">Livewire</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Feature Grid Side -->
+                        <div class="lg:w-2/5 w-full">
+                            <div class="grid grid-cols-2 gap-4">
+                                <div class="p-6 rounded-[2rem] bg-slate-900/40 border border-white/5 hover:border-amber-500/30 transition-all group/feat">
+                                    <div class="w-10 h-10 rounded-xl bg-amber-500/10 flex items-center justify-center mb-4 group-hover/feat:scale-110 transition-transform">
+                                        <i data-lucide="user-plus" class="text-amber-400 w-5 h-5"></i>
+                                    </div>
+                                    <h4 class="font-bold text-white text-sm mb-1">Admissions</h4>
+                                    <p class="text-slate-500 text-[10px] uppercase font-bold tracking-tighter">Automated Entry</p>
+                                </div>
+                                <div class="p-6 rounded-[2rem] bg-slate-900/40 border border-white/5 hover:border-amber-500/30 transition-all group/feat">
+                                    <div class="w-10 h-10 rounded-xl bg-amber-500/10 flex items-center justify-center mb-4 group-hover/feat:scale-110 transition-transform">
+                                        <i data-lucide="calendar" class="text-amber-400 w-5 h-5"></i>
+                                    </div>
+                                    <h4 class="font-bold text-white text-sm mb-1">Attendance</h4>
+                                    <p class="text-slate-500 text-[10px] uppercase font-bold tracking-tighter">Daily Tracking</p>
+                                </div>
+                                <div class="p-6 rounded-[2rem] bg-slate-900/40 border border-white/5 hover:border-amber-500/30 transition-all group/feat">
+                                    <div class="w-10 h-10 rounded-xl bg-amber-500/10 flex items-center justify-center mb-4 group-hover/feat:scale-110 transition-transform">
+                                        <i data-lucide="file-text" class="text-amber-400 w-5 h-5"></i>
+                                    </div>
+                                    <h4 class="font-bold text-white text-sm mb-1">Exam Results</h4>
+                                    <p class="text-slate-500 text-[10px] uppercase font-bold tracking-tighter">Grade Engine</p>
+                                </div>
+                                <div class="p-6 rounded-[2rem] bg-slate-900/40 border border-white/5 hover:border-amber-500/30 transition-all group/feat">
+                                    <div class="w-10 h-10 rounded-xl bg-amber-500/10 flex items-center justify-center mb-4 group-hover/feat:scale-110 transition-transform">
+                                        <i data-lucide="credit-card" class="text-amber-400 w-5 h-5"></i>
+                                    </div>
+                                    <h4 class="font-bold text-white text-sm mb-1">Fee Manager</h4>
+                                    <p class="text-slate-500 text-[10px] uppercase font-bold tracking-tighter">Secure Payments</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Background Decorative Number -->
+                <div class="absolute -bottom-10 -right-10 text-[15rem] font-black text-slate-900/20 select-none group-hover:text-amber-500/5 transition-colors duration-700 pointer-events-none">05</div>
+            </div>        </div>
 
         <!-- CodeCanyon Section -->
         <div class="reveal">
-            <h3 class="text-2xl font-bold text-white mb-8 flex items-center gap-3">
-                <i data-lucide="shopping-cart" class="text-indigo-400"></i>
-                CodeCanyon Projects
-            </h3>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div class="flex items-center gap-4 mb-12">
+                <div class="h-px flex-1 bg-gradient-to-r from-transparent to-slate-800"></div>
+                <h3 class="text-2xl font-black text-white flex items-center gap-3 px-6 py-3 rounded-full border border-slate-800 bg-slate-900/50">
+                    <i data-lucide="shopping-cart" class="text-indigo-400 w-6 h-6"></i>
+                    Marketplace Scripts
+                </h3>
+                <div class="h-px flex-1 bg-gradient-to-l from-transparent to-slate-800"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <!-- CodeCanyon 1 -->
-                <div class="p-6 rounded-2xl bg-indigo-900/10 border border-indigo-500/20 hover:bg-indigo-900/20 transition-all">
-                    <h4 class="font-bold text-white mb-2">Salon SaaS Script</h4>
-                    <p class="text-sm text-slate-400 mb-4">Complete salon management system with appointment booking and multi-vendor support.</p>
-                    <a href="#" class="inline-flex items-center text-sm font-bold text-indigo-400 hover:text-indigo-300">
-                        View on CodeCanyon <i data-lucide="external-link" class="ml-2 w-4 h-4"></i>
+                <div class="project-card-premium p-8 rounded-[2rem] group flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 rounded-xl bg-indigo-500/5 border border-indigo-500/10 flex items-center justify-center mb-6 group-hover:bg-indigo-500/10 transition-colors">
+                            <i data-lucide="scissors" class="text-indigo-400 w-6 h-6"></i>
+                        </div>
+                        <h4 class="text-xl font-bold text-white mb-3 group-hover:text-indigo-400 transition-colors">Salon SaaS Script</h4>
+                        <p class="text-sm text-slate-400 mb-6 leading-relaxed">Multi-vendor salon management system with appointment automation.</p>
+                        <div class="flex flex-wrap gap-2 mb-8">
+                            <span class="tech-badge !text-[9px] !px-2 !py-0.5">Laravel</span>
+                            <span class="tech-badge !text-[9px] !px-2 !py-0.5">Bootstrap</span>
+                            <span class="tech-badge !text-[9px] !px-2 !py-0.5">jQuery</span>
+                        </div>
+                    </div>
+                    <a href="#" class="inline-flex items-center text-sm font-bold text-indigo-400 hover:text-indigo-300 group/link">
+                        View on CodeCanyon 
+                        <i data-lucide="arrow-up-right" class="ml-2 w-4 h-4 transition-transform group-hover/link:translate-x-1 group-hover/link:-translate-y-1"></i>
                     </a>
                 </div>
+
                 <!-- CodeCanyon 2 -->
-                <div class="p-6 rounded-2xl bg-indigo-900/10 border border-indigo-500/20 hover:bg-indigo-900/20 transition-all">
-                    <h4 class="font-bold text-white mb-2">Multi-vendor eCommerce</h4>
-                    <p class="text-sm text-slate-400 mb-4">A powerful marketplace engine with advanced vendor dashboards and shipping logic.</p>
-                    <a href="#" class="inline-flex items-center text-sm font-bold text-indigo-400 hover:text-indigo-300">
-                        View on CodeCanyon <i data-lucide="external-link" class="ml-2 w-4 h-4"></i>
+                <div class="project-card-premium p-8 rounded-[2rem] group flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 rounded-xl bg-emerald-500/5 border border-emerald-500/10 flex items-center justify-center mb-6 group-hover:bg-emerald-500/10 transition-colors">
+                            <i data-lucide="shopping-bag" class="text-emerald-400 w-6 h-6"></i>
+                        </div>
+                        <h4 class="text-xl font-bold text-white mb-3 group-hover:text-emerald-400 transition-colors">Marketplace Engine</h4>
+                        <p class="text-sm text-slate-400 mb-6 leading-relaxed">High-performance multi-vendor marketplace with shipping logic.</p>
+                        <div class="flex flex-wrap gap-2 mb-8">
+                            <span class="tech-badge !text-[9px] !px-2 !py-0.5">Laravel</span>
+                            <span class="tech-badge !text-[9px] !px-2 !py-0.5">MySQL</span>
+                            <span class="tech-badge !text-[9px] !px-2 !py-0.5">Tailwind</span>
+                        </div>
+                    </div>
+                    <a href="#" class="inline-flex items-center text-sm font-bold text-emerald-400 hover:text-emerald-300 group/link">
+                        View on CodeCanyon 
+                        <i data-lucide="arrow-up-right" class="ml-2 w-4 h-4 transition-transform group-hover/link:translate-x-1 group-hover/link:-translate-y-1"></i>
                     </a>
                 </div>
+
                 <!-- CodeCanyon 3 -->
-                <div class="p-6 rounded-2xl bg-indigo-900/10 border border-indigo-500/20 hover:bg-indigo-900/20 transition-all">
-                    <h4 class="font-bold text-white mb-2">Inventory Pro Script</h4>
-                    <p class="text-sm text-slate-400 mb-4">Lightweight, fast inventory manager designed for small to medium retail businesses.</p>
-                    <a href="#" class="inline-flex items-center text-sm font-bold text-indigo-400 hover:text-indigo-300">
-                        View on CodeCanyon <i data-lucide="external-link" class="ml-2 w-4 h-4"></i>
+                <div class="project-card-premium p-8 rounded-[2rem] group flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 rounded-xl bg-orange-500/5 border border-orange-500/10 flex items-center justify-center mb-6 group-hover:bg-orange-500/10 transition-colors">
+                            <i data-lucide="box" class="text-orange-400 w-6 h-6"></i>
+                        </div>
+                        <h4 class="text-xl font-bold text-white mb-3 group-hover:text-orange-400 transition-colors">Inventory Pro</h4>
+                        <p class="text-sm text-slate-400 mb-6 leading-relaxed">Next-gen inventory manager for modern retail businesses.</p>
+                        <div class="flex flex-wrap gap-2 mb-8">
+                            <span class="tech-badge !text-[9px] !px-2 !py-0.5">Laravel</span>
+                            <span class="tech-badge !text-[9px] !px-2 !py-0.5">jQuery</span>
+                            <span class="tech-badge !text-[9px] !px-2 !py-0.5">Alpine</span>
+                        </div>
+                    </div>
+                    <a href="#" class="inline-flex items-center text-sm font-bold text-orange-400 hover:text-orange-300 group/link">
+                        View on CodeCanyon 
+                        <i data-lucide="arrow-up-right" class="ml-2 w-4 h-4 transition-transform group-hover/link:translate-x-1 group-hover/link:-translate-y-1"></i>
                     </a>
                 </div>
             </div>
@@ -287,7 +521,7 @@
                             </div>
                             <div>
                                 <p class="text-xs text-slate-500 uppercase tracking-widest">Email Me</p>
-                                <p class="text-white font-medium">hello@safiull.dev</p>
+                                <p class="text-white font-medium">safiullalam9931@gmail.com</p>
                             </div>
                         </div>
                         <div class="flex items-center gap-4">

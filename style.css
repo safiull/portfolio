@@ -29,12 +29,82 @@
 
 /* Skill Pills */
 .skill-pill {
-    @apply px-4 py-2 bg-slate-800/50 border border-slate-700 rounded-lg text-xs font-medium text-slate-300;
+    padding: 0.5rem 1rem;
+    background-color: rgba(30, 41, 59, 0.5);
+    border: 1px solid #334155;
+    border-radius: 0.5rem;
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: #cbd5e1;
 }
 
-/* Project Card */
-.project-card {
-    @apply rounded-3xl overflow-hidden bg-slate-900/50 border border-slate-800 transition-all duration-300 hover:-translate-y-2 hover:border-indigo-500/30 hover:shadow-2xl hover:shadow-indigo-500/10;
+/* Project Card Premium */
+.project-card-premium {
+    background: linear-gradient(135deg, rgba(30, 41, 59, 0.4) 0%, rgba(15, 23, 42, 0.4) 100%);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.03);
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+.project-card-premium::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(99, 102, 241, 0.3), transparent);
+    transform: translateX(-100%);
+    transition: transform 0.7s ease;
+}
+
+.project-card-premium:hover::before {
+    transform: translateX(100%);
+}
+
+.project-card-premium:hover {
+    transform: translateY(-10px) scale(1.02);
+    border-color: rgba(99, 102, 241, 0.2);
+    box-shadow: 0 30px 60px -12px rgba(0, 0, 0, 0.5), 0 0 20px rgba(99, 102, 241, 0.1);
+}
+
+/* Custom Badge for Tech */
+.tech-badge {
+    padding: 0.4rem 0.8rem;
+    background: rgba(79, 70, 229, 0.05);
+    border: 1px solid rgba(79, 70, 229, 0.1);
+    border-radius: 10px;
+    font-size: 0.7rem;
+    font-weight: 700;
+    color: #a5b4fc;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    transition: all 0.3s ease;
+}
+
+.project-card-premium:hover .tech-badge {
+    background: rgba(79, 70, 229, 0.1);
+    border-color: rgba(79, 70, 229, 0.3);
+    color: #c7d2fe;
+}
+
+/* Section Title Polish */
+.section-title-glow {
+    position: relative;
+    display: inline-block;
+}
+
+.section-title-glow::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 60px;
+    height: 4px;
+    background: linear-gradient(90deg, #4f46e5, #06b6d4);
+    border-radius: 2px;
 }
 
 /* Reveal Animation */
@@ -51,11 +121,16 @@
 
 /* Navbar active state on scroll */
 nav.scrolled {
-    @apply bg-slate-950/80 backdrop-blur-xl border-b border-indigo-500/20 shadow-2xl shadow-indigo-500/10;
+    background-color: rgba(2, 6, 23, 0.8);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+    border-bottom: 1px solid rgba(99, 102, 241, 0.2);
+    box-shadow: 0 25px 50px -12px rgba(99, 102, 241, 0.1);
 }
 
 nav.scrolled > div {
-    @apply py-3;
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
 }
 
 /* Custom Scrollbar */
@@ -74,4 +149,71 @@ nav.scrolled > div {
 
 ::-webkit-scrollbar-thumb:hover {
     background: #312e81;
+}
+
+/* Background Grid Pattern */
+.bg-grid {
+    background-image: radial-gradient(circle at 1px 1px, rgba(255, 255, 255, 0.05) 1px, transparent 0);
+    background-size: 40px 40px;
+}
+
+/* Enhanced Glassmorphism */
+.glass-morphism {
+    background: rgba(15, 23, 42, 0.3);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
+
+/* Floating Animation */
+@keyframes float {
+    0% { transform: translateY(0px) rotate(0deg); }
+    50% { transform: translateY(-20px) rotate(2deg); }
+    100% { transform: translateY(0px) rotate(0deg); }
+}
+
+.animate-float {
+    animation: float 6s ease-in-out infinite;
+}
+
+/* Tech Stack Glow Effect */
+.tech-stack-glow {
+    position: relative;
+    z-index: 1;
+}
+
+.tech-stack-glow::after {
+    content: '';
+    position: absolute;
+    inset: -20px;
+    background: radial-gradient(circle, rgba(79, 70, 229, 0.2) 0%, transparent 70%);
+    z-index: -1;
+    filter: blur(40px);
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.tech-stack-glow:hover::after {
+    opacity: 1;
+}
+
+@keyframes spin-slow {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+.animate-spin-slow {
+    animation: spin-slow 12s linear infinite;
+}
+
+/* Badge Animation */
+.badge-glow {
+    box-shadow: 0 0 20px rgba(79, 70, 229, 0.2);
+    animation: pulse-glow 3s infinite;
+}
+
+@keyframes pulse-glow {
+    0%, 100% { box-shadow: 0 0 20px rgba(79, 70, 229, 0.2); }
+    50% { box-shadow: 0 0 40px rgba(79, 70, 229, 0.4); }
 }
