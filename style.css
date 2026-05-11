@@ -1,0 +1,77 @@
+/* Custom Styles */
+
+/* Glassmorphism utility */
+.glass {
+    background: rgba(15, 23, 42, 0.6);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+}
+
+/* Nav Link Hover Effect */
+.nav-link {
+    position: relative;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #818cf8;
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+/* Skill Pills */
+.skill-pill {
+    @apply px-4 py-2 bg-slate-800/50 border border-slate-700 rounded-lg text-xs font-medium text-slate-300;
+}
+
+/* Project Card */
+.project-card {
+    @apply rounded-3xl overflow-hidden bg-slate-900/50 border border-slate-800 transition-all duration-300 hover:-translate-y-2 hover:border-indigo-500/30 hover:shadow-2xl hover:shadow-indigo-500/10;
+}
+
+/* Reveal Animation */
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Navbar active state on scroll */
+nav.scrolled {
+    @apply bg-slate-950/80 backdrop-blur-xl border-b border-indigo-500/20 shadow-2xl shadow-indigo-500/10;
+}
+
+nav.scrolled > div {
+    @apply py-3;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #020617;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #1e293b;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #312e81;
+}
